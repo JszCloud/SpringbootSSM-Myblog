@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link type="text/css" href="../static/bootstrap/css/bootstrap.css">
+    <link type="text/css" href="../static/bootstrap/css/bootstrap-table.css">
+    <link type="text/css" href="../static/bootstrap/css/bootstrap-theme.css">
+
+    <script src="../sstatic/jquery/jquery-3.2.1.js"></script>
+    <script src="../static/bootstrap/js/bootstrap.js"></script>
+    <script src="../static/bootstrap/js/bootstrap-table.js"></script>
+    <script src="../static/bootstrap/js/locale/bootstrap-table-zh-CN.js"></script>
+</head>
+<body>
+<div id="id"></div>
+<script>
+    $(function () {
+
+        $.ajax({
+            url : "codeList/list",
+            type : "post",
+
+            dataType : "json",
+            success : function(data){
+                var obj=[];
+                for(var p in data){
+                    obj.push(data.list[p])
+                }
+
+            }
+        })
+    })
+
+</script>
+</body>
+</html>
