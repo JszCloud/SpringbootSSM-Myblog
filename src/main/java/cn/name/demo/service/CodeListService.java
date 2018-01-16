@@ -17,7 +17,7 @@ public interface CodeListService {
      * 查询代码列表所有数据
      * @return
      */
-    PageInfo<CodeList> findAll();
+    PageInfo<CodeList> findAll(PageInfo<CodeList> pageInfo);
 
     /**
      * 根据no编号查询

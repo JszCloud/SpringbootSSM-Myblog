@@ -27,11 +27,11 @@ public class CodeListServiceImpl implements CodeListService {
      * @return
      */
     @Override
-    public PageInfo<CodeList> findAll() {
+    public PageInfo<CodeList> findAll(PageInfo<CodeList> pageInfo) {
         //分页、pageNum是当前页数，pageSize是当前页面数据条数
-        PageHelper.startPage(2,10);
+        PageHelper.startPage(pageInfo.getPageNum(),pageInfo.getPageSize());
         List<CodeList> list= codeListMapper.selectByExample(codeListExample);
-        PageInfo<CodeList> pageInfo=new PageInfo<>(list);
+        pageInfo=new PageInfo<>(list);
         return pageInfo;
     }
 

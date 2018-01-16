@@ -34,9 +34,10 @@ public class CodeListController {
      * @param pageInfo
      * @return
      */
-    @PostMapping("list")
+    @GetMapping("list")
     public PageInfo<CodeList> list(PageInfo<CodeList> pageInfo){
-        return codeListService.findAll();
+        pageInfo.setPageSize(10);
+        return codeListService.findAll(pageInfo);
     }
 
     /**

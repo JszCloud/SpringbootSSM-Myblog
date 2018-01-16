@@ -1,4 +1,4 @@
-$(function () {
+
     $.ajax({
         url: "codeList/list",
         type: "post",
@@ -37,4 +37,4 @@ $(function () {
         }
 
     })
-})
+
