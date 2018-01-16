@@ -1,7 +1,7 @@
 
     $.ajax({
-        url: "codeList/list",
-        type: "post",
+        url: "/codeList/list",
+        type: "get",
         dataType: "json",
         success: function (data) {
             var row = data.list;
