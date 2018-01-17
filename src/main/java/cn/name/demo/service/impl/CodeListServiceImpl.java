@@ -63,5 +63,6 @@ public class CodeListServiceImpl implements CodeListService {
         List<CodeList> list= codeListMapper.selectByExample(codeListExample);
         PageInfo<CodeList> pageInfo=new PageInfo<>(list);
         return pageInfo;
+
     }
 }

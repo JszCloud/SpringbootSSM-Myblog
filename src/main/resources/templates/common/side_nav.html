@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--侧边导航-->
+<ul th:fragment="side_nav">
+    <li class="layui-nav-item layui-this">
+        <a th:href="@{/code/home}"><i class="fa fa-home fa-fw"></i>&nbsp;网站首页</a>
+    </li>
+    <li class="layui-nav-item">
+        <a th:href="@{/code/article}"><i class="fa fa-file-text fa-fw"></i>&nbsp;文章专栏</a>
+    </li>
+    <li class="layui-nav-item">
+        <a th:href="@{/code/resource}"><i class="fa fa-tags fa-fw"></i>&nbsp;资源分享</a>
+    </li>
+    <li class="layui-nav-item">
+        <a th:href="@{/code/timeline}"><i class="fa fa-road fa-fw"></i>&nbsp;点点滴滴</a>
+    </li>
+    <li class="layui-nav-item">
+        <a th:href="@{/code/about}"><i class="fa fa-info fa-fw"></i>&nbsp;关于本站</a>
+    </li>
+</ul>
